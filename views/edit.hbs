@@ -1,0 +1,13 @@
+<html>
+    <body>
+    <h1>EDIT PRODUK</h1>
+
+    <form action="/update" method="POST">
+        <input name="id" value="{{results.id}}" type="hidden">
+        <input name="nama_produk" value="{{results.nama_produk}}">
+        <input name="jumlah" value="{{results.jumlah}}">
+        <input name="harga" value="{{results.harga}}">
+        <input name="keterangan" value="{{results.keterangan}}">
+        <input type="submit">
+    </form>
+</html>

@@ -1,0 +1,33 @@
+<html>
+    <body>
+    <h1>Produk</h1>
+        <table>
+    {{#each results}}
+        <tr>
+          <td>{{ id }}</td>
+          <td>{{ nama_produk }}</td>
+          <td>{{ jumlah }}</td>
+          <td>{{ harga }}</td>
+          <td>{{ keterangan }}</td>
+          <td>
+            {{!-- <a href="javascript:void(0);" class="btn btn-sm btn-info edit" data-id="{{ product_id }}" data-product_name="{{ product_name }}" data-product_price="{{ product_price }}">Edit</a> --}}
+            {{!-- <a href="javascript:void(0);" class="btn btn-sm btn-danger delete" data-id="{{ product_id }}">Delete</a> --}}
+            <a href="/edit/{{id}}">Edit</a>
+            <a href="/delete/{{id}}">Delete</a>
+          </td>
+        </tr>
+        {{/each}}
+        </table>
+
+
+        <form action="/simpan" method="POST">
+        <input name="nama_produk">
+        <input name="jumlah">
+        <input name="harga">
+        <input name="keterangan">
+        <input type="submit">
+    </form>
+    </body>
+
+
+</html>
